@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__customer-support__*",
+      "mcp__agentcore-gateway__*",
+      "Bash(python*)",
+      "Bash(pip*)",
+      "Bash(aws*)",
+      "Bash(docker*)"
+    ]
+  },
+  "mcpServers": {
+    "customer-support": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["-m", "agent.mcp_server"],
+      "env": {
+        "CLAUDE_CODE_USE_BEDROCK": "1"
+      }
+    }
+  }
+}
